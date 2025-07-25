@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isJumping) return;
         isJumping = true;
 
-        let jumpHeight = 150;
-        let gravity = 7;
+        let jumpHeight = 190;
+        let gravity = 6;
         let dogBottom = parseInt(getComputedStyle(dog).bottom);
 
         // jump

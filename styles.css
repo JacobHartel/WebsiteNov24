@@ -114,6 +114,27 @@ body{
     font-size: .4em;
 }
 
+.Robotic-Arm {
+    width: 60%;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.Robotic-Arm h3 {
+    font-size: .9em;
+}
+
+.Robotic-Arm video {
+    margin-bottom: 3%;
+}
+
+.Robotic-Arm p {
+    text-align: left;
+    text-indent: 2em;
+}
+
 /*Game components/elements */
 
 #start-game-btn {
@@ -129,7 +150,7 @@ body{
     margin: 20px auto;
     background-color: rgb(169, 169, 170);
     overflow: hidden;
-    
+    border-radius: 10px;
 }
 
 

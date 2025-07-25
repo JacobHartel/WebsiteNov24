@@ -160,7 +160,7 @@ body{
     left: 50px;
     width: 110px;
     height: 110px;
-    background-image: url('images/doggy.png');
+    background-image: url('images/Jacob_Hartel_dog.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -172,7 +172,7 @@ body{
     left: 0;
     width: 110px;
     height: 110px;
-    background-image: url('images/rocky.png');
+    background-image: url('images/Jacob_Hartel_rocky.png');
     background-size: contain;
     background-repeat: no-repeat;
 }

@@ -1,43 +1,46 @@
-html{
+html {
     font-family: "PT Mono", monospace;
     font-weight: 400;
     font-style: normal;
 }
 
-header{
+header {
     font-family: "PT Mono", monospace;
     font-weight: 500;
     font-style: bold;
 }
 
-body{
+body {
     font-family: "PT Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    text-indent: 20px; 
+    text-indent: 20px;
     line-height: 2em;
-    
+
 }
 
-.mainBody{
+.mainBody {
     margin: 0 auto;
-    width: 80%;
-    text-align: center;
+    width: 55%;
+    text-align: left;
     margin-top: 50px;
+    font-size: 1.2em;
 }
+
 
 .mainBodyB {
     text-indent: 0;
     margin: 20px;
 }
 
-.mainBody h1{
-    margin: 20px;
+.mainBody h1 {
+    margin: 40px;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.mainBody p{
+.mainBody p {
+    margin-top: 5%;
     line-height: 2em;
 }
 
@@ -56,7 +59,7 @@ body{
     color: #0c63e4;
 }
 
-.email-link:hover{
+.email-link:hover {
     color: rgba(245, 148, 21, 0.795);
     text-decoration: underline;
     text-decoration-style: wavy;
@@ -64,8 +67,8 @@ body{
 
 .accordion-button.collapsed {
     padding: 1.5rem;
-    font-size: 1.5rem; 
-    min-height: 80px; 
+    font-size: 1.5rem;
+    min-height: 80px;
 }
 
 .accord {
@@ -76,7 +79,7 @@ body{
     list-style: none;
 }
 
-.listResume img{
+.listResume img {
     display: block;
     justify-content: center;
     align-items: center;
@@ -123,7 +126,7 @@ body{
 }
 
 .Robotic-Arm video {
-    margin-top: 3%;   
+    margin-top: 3%;
 }
 
 .Robotic-Arm video {
@@ -239,12 +242,57 @@ body{
 
 /*end game components*/
 
-@media only screen and (max-width: 990px){
+@media only screen and (max-width: 990px) {
+
+    .mainBody {
+        margin: 0 auto;
+        width: 65%;
+        text-align: left;
+        margin-top: 50px;
+        font-size: 1.2em;
+    }
+
+    
+
+    .mainBodyG img {
+        height: 250px;
+        width: auto;
+    }
+
+    .BankingGit p {
+        width: 95%;
+    }
+
+
+    .mainBodyB {
+        text-indent: 0;
+        margin: 20px;
+    }
+
+    .mainBody h1 {
+        margin: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .mainBody p {
+        margin-top: 5%;
+        line-height: 2em;
+    }
+
+    #collapseThree img {
+        margin-top: 30px;
+    }
+
     /*Game elements for mobile*/
+
+    #game-container {
+        display: none;
+    }
 
     .intro {
         display: none;
-        
+
     }
 
     #dog {
@@ -257,8 +305,8 @@ body{
         background-size: contain;
         background-repeat: no-repeat;
     }
-    
-    
+
+
     #obstacle {
         position: absolute;
         bottom: 0;

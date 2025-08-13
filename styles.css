@@ -117,6 +117,41 @@ body {
     font-size: .4em;
 }
 
+.planetaryGear {
+    width: 70%;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8%;
+    margin-bottom: 8%;
+
+}
+
+
+.planetaryGear h2 {
+    font-size: 2em;
+    margin-bottom: 5%;
+    
+
+}
+
+.smallTitle {
+    margin: 5%;
+}
+
+.planetaryGear p {
+    font-size: .7em;
+    text-align: left;
+}
+
+.carousel-item img {
+  width: auto !important; 
+  height: 500px;       /* set desired width */
+  margin: 0 auto;      /* center in carousel */
+}
+
+
+
 .Robotic-Arm {
     width: 70%;
     align-content: center;

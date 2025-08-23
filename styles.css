@@ -127,6 +127,12 @@ body {
 
 }
 
+.planetaryGear h1 {
+    width: 90%;
+    font-size: .9em;
+    margin: 0 auto;
+}
+
 
 .planetaryGear h2 {
     font-size: 2em;

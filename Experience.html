@@ -1,196 +1,95 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMPRMJZN25"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-RMPRMJZN25');
-    </script>
-
-    <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 5053907, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
-
-    <title>Experience</title>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand active" href="index.html">Hartel</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Experience.html">Resume</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="books.html">Books</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Projects.html">Projects</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <main class="scene">
+    <div class="bg-layer" aria-hidden="true"></div>
+    <section class="frame content-frame" aria-labelledby="experience-title">
+      <header class="frame-top">
+        <span>JH.INDUSTRIAL // EXPERIENCE</span>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="books.html">Books</a>
         </nav>
-    </header>
-    <div class="resumeHeader">
-        <h1>Resume</h1>
-        <a href="mailto:example@example.com" class="email-link">~Email me for CV or questions~</a>
-    </div>
-    <div class="accord">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Certifications
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <ul class="listResume">
-                            <li><strong>Software Developer C# </strong> - This certification is thru Certiport. This was during my C# II
-                                class. IT covered the foundation of development in C#. MVC architecture, common crud app techniques, and more.
-                            </li>
-                            <br>
-                            <li><strong>Web Developer IT Specialist</strong> - This certification is thru Certiport and
-                                focused on HTML and CSS - After full semester of Web Dev coursework</li>
-                            <br>
-                            <li><strong>JavaScript IT Specialist</strong> - JavaScript certification this was also
-                                preceeded by a semeter of coursework. The semester did focus on frameworks like React
-                                but the certification was mostly based around vanilla javascript OOP in the DOM</li>
-                            <br>
-                            <li><strong>SQL Database IT Specialist</strong> - After a semester of my Database course we
-                                took this exam, learned a lot about designing databases, implementing them in the cloud
-                                and using them within projects written in Python but have used SQL in .NET/C# code
-                                bases.</li>
-                            <br>
-                            <li><strong>AWS Cloud Practitioner</strong> - Cloud Computing course offered this exam at
-                                the end of the semester. I believe most of the course work was provided by Amazon and
-                                focused on AWS. Learning the meta view of the platform, learning what their products do,
-                                pricing, availability and labs deploying instances with use of some products.</li>
-                        </ul>
-                    </div>
-                </div>
+      </header>
+
+      <div class="content-wrap">
+        <h1 id="experience-title" class="page-title">Experience</h1>
+        <section class="experience-stack">
+          <article class="experience-item">
+            <div class="experience-media">
+              <img src="assets/experience/salesforce.jpg" alt="Salesforce transit station fabrication work" />
             </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Education
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <ul class="listResume">
-                            <li><strong>High School Diploma</strong> - Pierce City High School - 3.6 GPA</li>
-                            <br>
-                            <li><strong>Ozark Tech</strong> - Currently Enrolled ~3.4 and climbing, based in
-                                Springfield, MO. This is a technical
-                                school while it is small, they have a fantastic program and practical training. I know
-                                for
-                                a fact I have more real world skills, in 2 years, than most bachelor degree students
-                                from much larger
-                                universities.</li>
-                            <br>
-                            <li><strong>Missouri State University</strong> - Accepted and waiting to enroll in courses.
-                                Will most likely be going to both institutions simultaneously because some courses to
-                                finish Ozark Tech are only running one semester a year</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="experience-details">
+              <h2>Welder/CNC Operator/Fabricator</h2>
+              <p class="experience-meta">Architectural Systems Incorporated</p>
+              <p>
+                Fabrication-focused role building large aluminum components, including work tied to the SalesForce Transit Station shell and soffit sections.
+              </p>
+              <ul class="line-list">
+                <li>Welding and CNC fabrication workflow</li>
+                <li>Structural part production and finishing</li>
+                <li>High-precision manufacturing constraints</li>
+              </ul>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Work Experience
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <ul class="listResume">
-                            <li><strong>Welder/CNC Operator/Fabricator<strong> - I worked for Architectural Systems
-                                Incorporated. This was one of my favorite jobs because of what we were building. If you
-                                are familiar with the SalesForce Transit Station, we build the "curtain" which is the
-                                alluminum outter "shell." It's alluminum with geometric cutouts here is a photo. Also
-                                worked on
-                                some of the inner soffit.</li>
-                            <img src="images/Jacob_Hartel_Salesforce.jpg">
-                            <br>
-                            <li><strong>Production Technician</strong> - This job spread accross multiple companies,
-                                theaters, and venues. I was mostly contracted but was in charge of the Remingtons Event
-                                Center in Springfield, MO. I was
-                                also able to work in Las Vegas building stages for EDC. These were amazing experiences
-                                that taught me team work, safety, attention to detail and working in a dynamic
-                                environment with a lot going on. I've attached a photo to one of the stages I helped
-                                errect.
-                                It is really hard to put to scale in a photo. One of the most exciting jobs of my life.
-                            </li>
-                            <img src="images/Jacob_Hartel_EDC.jpg">
-                            <br>
-                            <li><strong>Prepress Technician</strong> - I've been at Southern Missouri Containers for
-                                almost 3 years now. I have learned a lot about the manufacturing process. I have
-                                researched "Lean 6 Sigma" practices and it really drives a lot of my projects today.
-                                I know that it was created around manufacturing practices, saving time, logging
-                                everything, doing your best to be as efficeint as possible. I think that is extremely
-                                important. Here I've mostly worked with the production schedule. I meet with supervisors
-                                to ensure we had consistent runs with very little downtime. Providing tools, repairing
-                                tooling, ensuring inks are created correctly, and much more!
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-media">
+              <img src="assets/experience/edc.jpg" alt="EDC stage production work" />
             </div>
-        </div>
-    </div>
+            <div class="experience-details">
+              <h2>Production Technician</h2>
+              <p class="experience-meta">Event and Stage Production</p>
+              <p>
+                Production work across multiple venues and teams, including stage builds and operational support in fast-moving live environments.
+              </p>
+              <ul class="line-list">
+                <li>Stage and venue build execution</li>
+                <li>On-site coordination and safety workflow</li>
+                <li>Rapid adaptation under schedule pressure</li>
+              </ul>
+            </div>
+          </article>
 
+          <article class="experience-item">
+            <div class="experience-media">
+              <img src="assets/blueprint-bg.jpg" alt="Blueprint background representing manufacturing systems work" />
+            </div>
+            <div class="experience-details">
+              <h2>Prepress Technician</h2>
+              <p class="experience-meta">Southern Missouri Containers</p>
+              <p>
+                Manufacturing support role focused on production continuity, tooling readiness, and process efficiency across scheduled runs.
+              </p>
+              <ul class="line-list">
+                <li>Production schedule coordination</li>
+                <li>Tooling, inks, and run-prep support</li>
+                <li>Continuous improvement mindset (Lean-oriented)</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </div>
 
-
-
-
-
-    <footer>
-        <div class="footerJH">
-            <aside><strong>Jacob
-                    Har&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;&#x06D7;tel</strong>
-                2024 </aside>
-            <aside class="miniFooter">Stacking unicode w/ Arabic symbols above ^^^^</aside>
-        </div>
-    </footer>
+      <footer class="frame-bottom">
+        <span>EGGZ-08 // EXPERIENCE MODULE</span>
+        <span id="clock"></span>
+      </footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
-
 </html>
+

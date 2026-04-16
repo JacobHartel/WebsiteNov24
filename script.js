@@ -28,13 +28,13 @@
       description:
         "Complete iteration path from first design to working prototype, including assembly and hardware refinement. Includes embedded test videos.",
       slides: [
-        { type: "image", src: "assets/projects/planetary-assemble.jpg", alt: "Assembling first design" },
-        { type: "image", src: "assets/projects/planetary-first-design.jpg", alt: "First design" },
-        { type: "image", src: "assets/projects/planetary-proto.jpg", alt: "Working prototype" },
-        { type: "image", src: "assets/projects/planetary-second-assembly.jpg", alt: "Second assembly" },
-        { type: "image", src: "assets/projects/planetary-gears.jpg", alt: "Second gear set" },
-        { type: "image", src: "assets/projects/planetary-solder-press.jpg", alt: "Solder press setup" },
-        { type: "image", src: "assets/projects/planetary-closeup.jpg", alt: "Spindle key screw closeup" },
+        { type: "image", src: "assets/projects/planetary-assemble.jpg", alt: "Assembling first design", width: 1521, height: 1568 },
+        { type: "image", src: "assets/projects/planetary-first-design.jpg", alt: "First design", width: 1612, height: 2149 },
+        { type: "image", src: "assets/projects/planetary-proto.jpg", alt: "Working prototype", width: 1492, height: 1989 },
+        { type: "image", src: "assets/projects/planetary-second-assembly.jpg", alt: "Second assembly", width: 1743, height: 1398 },
+        { type: "image", src: "assets/projects/planetary-gears.jpg", alt: "Second gear set", width: 1963, height: 2596 },
+        { type: "image", src: "assets/projects/planetary-solder-press.jpg", alt: "Solder press setup", width: 1609, height: 2145 },
+        { type: "image", src: "assets/projects/planetary-closeup.jpg", alt: "Spindle key screw closeup", width: 1435, height: 1913 },
         { type: "embed", src: "https://www.youtube.com/embed/HjzXU1eCSeM", title: "Planetary First Test" },
         { type: "embed", src: "https://www.youtube.com/embed/hBZqQqcEPnk", title: "Planetary Solder Press" },
         { type: "embed", src: "https://www.youtube.com/embed/JYCKTkzZ9mQ", title: "Planetary Output Video" }
@@ -45,7 +45,7 @@
       description:
         "Final C# project using MVC patterns across client and API. Keeps software work isolated from the hardware tracks.",
       slides: [
-        { type: "image", src: "assets/projects/banking-app.png", alt: "Banking app repository" }
+        { type: "image", src: "assets/projects/banking-app.png", alt: "Banking app repository", width: 2545, height: 1000 }
       ]
     },
     "robotic-arm": {
@@ -53,10 +53,10 @@
       description:
         "New larger robotic arm project with dedicated CAD iteration renders. This replaces the prior small-arm card.",
       slides: [
-        { type: "image", src: "assets/projects/robotic-arm-large-1.png", alt: "Large robotic arm render 1" },
-        { type: "image", src: "assets/projects/robotic-arm-large-2.png", alt: "Large robotic arm render 2" },
-        { type: "image", src: "assets/projects/robotic-arm-large-3.png", alt: "Large robotic arm render 3" },
-        { type: "image", src: "assets/projects/robotic-arm-large-4.png", alt: "Large robotic arm render 4" }
+        { type: "image", src: "assets/projects/robotic-arm-large-1.jpg", alt: "Large robotic arm render 1", width: 1000, height: 1031 },
+        { type: "image", src: "assets/projects/robotic-arm-large-2.jpg", alt: "Large robotic arm render 2", width: 1447, height: 1006 },
+        { type: "image", src: "assets/projects/robotic-arm-large-3.jpg", alt: "Large robotic arm render 3", width: 1584, height: 1135 },
+        { type: "image", src: "assets/projects/robotic-arm-large-4.jpg", alt: "Large robotic arm render 4", width: 1130, height: 961 }
       ]
     }
   };
@@ -64,6 +64,22 @@
   let activeSlides = [];
   let activeIndex = 0;
   let activeCard = null;
+
+  function loadSlideMedia(slideEl) {
+    if (!slideEl) return;
+    const lazyMedia = slideEl.querySelector("img[data-src], video[data-src], iframe[data-src]");
+    if (!lazyMedia) return;
+    lazyMedia.src = lazyMedia.dataset.src;
+    lazyMedia.removeAttribute("data-src");
+  }
+
+  function warmAdjacentSlides(index) {
+    if (!activeSlides.length) return;
+    const prevIndex = (index - 1 + activeSlides.length) % activeSlides.length;
+    const nextIndex = (index + 1) % activeSlides.length;
+    loadSlideMedia(activeSlides[prevIndex]);
+    loadSlideMedia(activeSlides[nextIndex]);
+  }
 
   function renderSlides(slides) {
     track.innerHTML = "";
@@ -73,20 +89,38 @@
 
       if (slide.type === "image") {
         const img = document.createElement("img");
-        img.src = slide.src;
         img.alt = slide.alt || "Project slide";
         img.loading = "lazy";
+        img.decoding = "async";
+        if (index === 0) {
+          img.src = slide.src;
+          img.fetchPriority = "high";
+        } else {
+          img.dataset.src = slide.src;
+          img.fetchPriority = "low";
+        }
+        if (slide.width) img.width = slide.width;
+        if (slide.height) img.height = slide.height;
         wrap.appendChild(img);
       } else if (slide.type === "video") {
         const video = document.createElement("video");
-        video.src = slide.src;
+        if (index === 0) {
+          video.src = slide.src;
+        } else {
+          video.dataset.src = slide.src;
+        }
         video.controls = true;
         video.preload = "metadata";
         wrap.appendChild(video);
       } else if (slide.type === "embed") {
         const iframe = document.createElement("iframe");
-        iframe.src = slide.src;
+        if (index === 0) {
+          iframe.src = slide.src;
+        } else {
+          iframe.dataset.src = slide.src;
+        }
         iframe.title = slide.title || "Embedded video";
+        iframe.loading = "lazy";
         iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
         iframe.referrerPolicy = "strict-origin-when-cross-origin";
         iframe.allowFullscreen = true;
@@ -98,6 +132,8 @@
 
     activeSlides = Array.from(track.querySelectorAll(".carousel-slide"));
     activeIndex = 0;
+    loadSlideMedia(activeSlides[activeIndex]);
+    warmAdjacentSlides(activeIndex);
     updateCounter();
   }
 
@@ -111,6 +147,8 @@
     activeSlides[activeIndex].classList.remove("active");
     activeIndex = (nextIndex + activeSlides.length) % activeSlides.length;
     activeSlides[activeIndex].classList.add("active");
+    loadSlideMedia(activeSlides[activeIndex]);
+    warmAdjacentSlides(activeIndex);
     updateCounter();
   }
 

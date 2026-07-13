@@ -51,7 +51,7 @@
     "robotic-arm": {
       title: "Large Robotic Arm (Standalone Ongoing)",
       description:
-        "New larger robotic arm project with dedicated CAD iteration renders. This replaces the prior small-arm card.",
+        "New larger robotic arm project with dedicated CAD iteration renders.",
       slides: [
         { type: "image", src: "assets/projects/robotic-arm-large-1.jpg", alt: "Large robotic arm render 1", width: 1000, height: 1031 },
         { type: "image", src: "assets/projects/robotic-arm-large-2.jpg", alt: "Large robotic arm render 2", width: 1447, height: 1006 },
